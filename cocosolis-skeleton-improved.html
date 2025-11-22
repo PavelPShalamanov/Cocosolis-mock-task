@@ -13,23 +13,22 @@
     <!-- <meta name="twitter:card" content="summary_large_image"> -->
 </head>
 <body>
-    <button href="#main-content" class="skip-link">Прескочи към съдържанието</button>
     <!-- Top Bar -->
-    <div>
+    <div class="top-bar">
         <p>сега с до 30% отстъпка в целия сайт</p>
     </div>
 
     <!-- Header -->
-    <header>
+    <header class="header-container">
         <!-- Logo -->
-        <div>
+        <div class="header-logo">
             <button href="javascript:void(0)">
                 <img src="#" alt="Лого на COCOSOLIS" width="150" height="50">
             </button>
         </div>
 
         <!-- Main Navigation -->
-        <nav aria-label="Главно меню">
+        <nav aria-label="Главно меню" class="main-nav">
             <ul>
                 <li>
                     <button aria-haspopup="true" aria-expanded="false">ПРОДУКТИ</button>
@@ -66,47 +65,53 @@
                 <li>
                     <button href="javascript:void(0)">БЛОГ</button>
                 </li>
+                <li>
+                    <!-- Search -->
+                    <div class="header-search">
+                        <button aria-label="Отвори търсачката" class="search-toggle">
+                            <span>Търсене</span>
+                        </button>
+                        <form class="search-form">
+                            <input type="search" id="search-input" placeholder="Търсене..." aria-label="Търсене">
+                            <button type="submit">Търси</button>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button aria-haspopup="true" aria-expanded="false" aria-label="Избор на език" class="language-toggle">BG</button>
+                        <ul>
+                            <li><button href="javascript:void(0)">EN</button></li>
+                            <li><button href="javascript:void(0)">DE</button></li>
+                            <li><button href="javascript:void(0)">FR</button></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <!-- User Account -->
+                    <div class="user-account">
+                        <button href="javascript:void(0)">
+                            <span>Вход</span>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <!-- Shopping Cart -->
+                    <div class="shopping-cart">
+                        <button href="javascript:void(0)">
+                            <span>Количка</span>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </li>
             </ul>
         </nav>
 
         <!-- Header Actions -->
-        <div>
-            <!-- Search -->
-            <div>
-                 <button aria-label="Отвори търсачката">
-                    <span>Търсене</span>
-                 </button>
-                <form>
-                    <input type="search" id="search-input" placeholder="Търсене..." aria-label="Търсене">
-                    <button type="submit">Търси</button>
-                </form>
-            </div>
-
-            <!-- Language Selector -->
-            <div>
-                <button aria-haspopup="true" aria-expanded="false" aria-label="Избор на език">BG</button>
-                <ul>
-                    <li><button href="javascript:void(0)">EN</button></li>
-                    <li><button href="javascript:void(0)">DE</button></li>
-                    <li><button href="javascript:void(0)">FR</button></li>
-                </ul>
-            </div>
-
-            <!-- User Account -->
-            <div>
-                <button href="javascript:void(0)">
-                    <span>Вход</span>
-                </button>
-            </div>
-
-            <!-- Shopping Cart -->
-            <div>
-                <button href="javascript:void(0)">
-                    <span>Количка</span>
-                    <span>0</span>
-                </button>
-            </div>
-        </div>
+        <!-- <div class="header-actions">
+            
+        </div> -->
     </header>
 
     <!-- Main Content -->
@@ -143,7 +148,7 @@
         </section>
 
         <!-- Club Banner -->
-        <section class="section">
+        <section class="section info-banner">
             <h2>Клуб COCOSOLIS</h2>
             <p>Присъединете се сега и се насладете на отстъпки</p>
             <p>Регистрирайте се сега и спечелете 30 точки.</p>
@@ -288,7 +293,7 @@
         </section>
 
         <!-- About Section -->
-        <section class="section">
+        <section class="section info-banner">
             <h2>За нас</h2>
             <p>Продуктите на COCOSОLIS са винаги натурални и създадени само с най-висококачествени био, студено пресовани масла.</p>
             <p>Създадени с любов и уважение към хората и природата. Нежни към кожата. Притежаващи аромат, в който ще се влюбите.</p>
@@ -335,7 +340,7 @@
         </section>
 
         <!-- Newsletter Section -->
-        <section class="section">
+        <section class="section info-banner">
             <h2>Абонирайте се за нашия бюлетин</h2>
             <p>Получавайте специални оферти и бъдете първи, които научават за нови продукти</p>
             <form>

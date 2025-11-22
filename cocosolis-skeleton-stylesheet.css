@@ -1,68 +1,483 @@
 :root {
-color: var(--brand-brown);
-font-weight: bold;
+    font-weight: bold;
 }
 
 /* Hero */
 .hero {
-background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200')
-center/cover no-repeat;
-color: white;
-padding: 6rem 1rem;
-text-align: center;
+    background: url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200')
+    center/cover no-repeat;
+    color: white;
+    padding: 6rem 6rem;
+    text-align: center;
 }
 
 .hero h1 {
-font-size: clamp(2rem, 5vw, 3rem);
-margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
 }
 
 
 /* Product Grid */
 .section {
-max-width: var(--max-width);
-margin: auto;
-padding: var(--pad);
+    max-width: var(--max-width);
+    margin: auto;
+    padding: var(--pad);
 }
 
 .grid {
-display: grid;
-gap: 1.5rem;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .product {
-background: white;
-color: black;
-padding: 1rem;
-border-radius: 8px;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-text-align: center;
+    background: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+    justify-content: center;
+}
+
+.product button{
+    background: tan;
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+    padding: 1.5vw 8vw;
+    margin: auto;
+    position: relative;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product button:hover{
+    transform: scale(1.05);
+    background: rgb(164, 141, 110);
+    z-index: 11;
 }
 
 .product img {
-width: 100%;
-border-radius: 8px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.info-banner{
+    background: sienna;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.info-banner button{
+    background: tan;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 0.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.info-banner button:hover{
+    background: rgb(164, 141, 110);
+    transform: scale(1.05);
+}
+
+.info-banner p{
+    font-size: medium;
+    font-weight: 500;
+}
+
+.info-banner input{
+    background: white;
+    border-radius: 8px;
+    border: none;
+    padding: 0.2rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 
 /* Footer */
 .footer {
-background: tan;
-color: white;
-padding: 2rem 1rem;
-margin-top: 3rem;
+    background: tan;
+    color: white;
+    padding: 2rem 2rem;
+    margin-top: 3rem;
 }
 
 .footer-inner {
-max-width: var(--max-width);
-margin: auto;
-display: grid;
-gap: 2rem;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: var(--max-width);
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-footer a {
-color: white;
-text-decoration: none;
+.footer ul{
+    list-style: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer button{
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    font-size: medium;
+    font-weight: 600;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.footer button:hover{
+    transform: scale(1.05);
+    background: rgb(164, 141, 110);
+}
+
+/* ====================================
+   HEADER STYLES
+   ==================================== */
+
+/* Top Bar - Promotional Banner */
+.top-bar {
+    background: linear-gradient(45deg, Sienna 0%, tan 100%);
+    color: white;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Main Header Container */
+header {
+    background: white;
+    box-shadow: 0 2px 8px rgb(94, 94, 94);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+/* Header Inner Layout */
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Logo Section */
+.header-logo {
+    flex-shrink: 0;
+}
+
+.header-logo button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.header-logo button:hover {
+    transform: scale(1.05);
+}
+
+.header-logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ====================================
+   NAVIGATION STYLES
+   ==================================== */
+
+.main-nav {
+    text-decoration: none;
+}
+
+.main-nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.main-nav > ul > li {
+    position: relative;
+}
+
+/* Main Nav Buttons */
+.main-nav > ul > li > button {
+    background: none;
+    border: none;
+    color: rgb(94, 94, 94);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.main-nav > ul > li > button:hover {
+    color: Sienna;
+}
+
+/* Dropdown Menu */
+.main-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgb(94, 94, 94);
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.main-nav li:hover > ul,
+.main-nav li:focus-within > ul {
+    display: block;
+}
+
+.main-nav ul ul li {
+    margin: 0;
+}
+
+.main-nav ul ul button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: rgb(94, 94, 94);
+    font-size: 0.85rem;
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.main-nav ul ul button:hover {
+    background-color: white;
+    color: rgb(102, 52, 29);
+}
+
+/* ====================================
+   HEADER ACTIONS SECTION
+   ==================================== */
+
+/* Search Section */
+.header-search {
+    position: relative;
+}
+
+.search-toggle {
+    background: none;
+    border: none;
+    color: rgb(94, 94, 94);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.search-toggle:hover {
+    color: rgb(102, 52, 29);
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 12px black;
+    border-radius: 4px;
+    padding: 0.75rem;
+    min-width: 300px;
+    z-index: 100;
+}
+
+.search-form.active {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-form input[type="search"] {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.search-form input[type="search"]:focus {
+    outline: none;
+    border-color: rgb(102, 52, 29);
+}
+
+.search-form button[type="submit"] {
+    background: rgb(102, 52, 29);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button[type="submit"]:hover {
+    background: sienna;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+}
+
+.language-toggle {
+    background: none;
+    border: 1px solid white;
+    color: rgb(94, 94, 94);
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    min-width: 50px;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.language-toggle:hover {
+    border-color: sienna;
+    color: rgb(102, 52, 29);
+}
+
+.language-selector ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 80px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.language-selector:hover ul,
+.language-selector:focus-within ul {
+    display: block;
+}
+
+.language-selector ul button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: rgb(94, 94, 94);
+    padding: 0.5rem 1rem;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-selector ul button:hover {
+    background-color: white;
+    color: sienna;
+}
+
+/* User Account */
+.user-account button {
+    background: none;
+    border: none;
+    color: rgb(94, 94, 94);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.user-account button:hover {
+    color: Sienna;
+}
+
+/* Shopping Cart */
+.shopping-cart {
+    position: relative;
+}
+
+.shopping-cart button {
+    background: sienna;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.shopping-cart button:hover {
+    background: sienna;
+}
+
+.cart-count {
+    background: white;
+    color: sienna;
+    border-radius: 8px;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    text-align: center;
 }
